@@ -7,9 +7,9 @@ import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <>
-    <div>
+    <div className="container">
       <NavBar/>
+      <div className="content">
       <Routes>
         <Route path="/" element={<BusinessPlan/>}/>
         <Route path="/Projektidé" element={<ProjectIdea/>}/>
@@ -18,7 +18,7 @@ function App() {
       </Routes>
       </div>
       <footer>VetPrep - 2026</footer>
-    </>
+   </div>
   )
 }
 
