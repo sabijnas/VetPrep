@@ -4,6 +4,7 @@ import BusinessPlan from './components/BusinessPlan'
 import ProjectIdea from './components/ProjectIdea'
 import ReadMore from './components/ReadMore'
 import NavBar from './components/NavBar'
+import Home from './components/Home'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <NavBar/>
       <div className="content">
       <Routes>
-        <Route path="/" element={<BusinessPlan/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/Affärsplan" element={<BusinessPlan/>}/>
         <Route path="/Projektidé" element={<ProjectIdea/>}/>
         <Route path="/LäsMer" element={<ReadMore/>}/>
         <Route path="*" element={<h1>404 Not Found</h1>}/>

@@ -36,7 +36,7 @@ const ReadMore = () => {
           större. Idén föddes när vår egna hund blev sjuk och vi insåg hur svårt
           det är att minnas symtom, beteenden och små förändringar i vardagen.
           Den frustrationen - att stå hos veterinären utan all information man
-          egenltigen hade observerat - blev startpunkten för VetPrep.{" "}
+          egentligen hade observerat - blev startpunkten för VetPrep.{" "}
         </p>
       </div>
       <div className="card-readmore">
