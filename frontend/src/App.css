@@ -11,4 +11,7 @@
 footer {
     text-align: center;
     padding: 1rem;
+    color: #405447;
+    background-color: #79a388;
+    font-family: "DM Sans", sans-serif;
 }
