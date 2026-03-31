@@ -1,4 +1,4 @@
-.card-readmore, .card-buisnessPlan {
+.readmore-card, .buisnessPlan-card, .projectIdea-card {
     border: 1px solid #39413c85;
     border-radius: 10px;
     margin: 20px auto;
@@ -13,7 +13,7 @@
     color: #39413c;
 }
 
-.readMoreP, .card-buisnessPlan {
+.readMoreP, .buisnessPlan-card, .projectIdea-card {
     color: #39413c;
     font-family: "DM Sans", sans-serif;
 }

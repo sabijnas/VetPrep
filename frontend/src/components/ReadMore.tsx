@@ -4,7 +4,7 @@ const ReadMore = () => {
   return (
     <>
       <h1>Läs mer om VetPrep</h1>
-      <div className="card-readmore">
+      <div className="readmore-card">
         <h3 className="readMoreHeader">Varför logga symptom och beteenden?</h3>
         <p className="readMoreP">
           När ett djur börjar må dåligt kan små förändringar vara lätta att
@@ -17,7 +17,7 @@ const ReadMore = () => {
           djur.{" "}
         </p>
       </div>
-      <div className="card-readmore">
+      <div className="readmore-card">
         <h3 className="readMoreHeader">Gratis att använda</h3>
         <p className="readMoreP">
           Tjänsten är helt gratis att använda, utan dolda kostnader eller
@@ -29,7 +29,7 @@ const ReadMore = () => {
           gratis konto, det tar bara någon minut att komma igång!{" "}
         </p>
       </div>
-      <div className="card-readmore">
+      <div className="readmore-card">
         <h3 className="readMoreHeader">Om oss</h3>
         <p className="readMoreP">
           VetPrep började som ett skolprojekt, men växte snabbt fram till något
@@ -39,7 +39,7 @@ const ReadMore = () => {
           egentligen hade observerat - blev startpunkten för VetPrep.{" "}
         </p>
       </div>
-      <div className="card-readmore">
+      <div className="readmore-card">
         <h3 className="readMoreHeader">Behöver du kontakta oss?</h3>
         <p className="readMoreP">
           Har du frågor, idéer eller vill berätta roliga historier om ditt djur?

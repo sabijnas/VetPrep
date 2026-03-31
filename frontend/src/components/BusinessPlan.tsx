@@ -4,7 +4,7 @@ const BusinessPlan = () => {
   return (
     <>
       <h1>Affärsplan</h1>
-      <div className="card-buisnessPlan">
+      <div className="buisnessPlan-card">
         <p>
           VetPrep är en applikation som hjälper djurägare att följa och
           dokumentera hälsan på sitt husdjur över tid. Genom att enkelt logga

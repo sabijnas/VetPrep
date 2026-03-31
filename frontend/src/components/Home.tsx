@@ -1,6 +1,10 @@
 const Home = () => {
 return (
-    <h1>Hem</h1>
+    <>
+    <div className="home-card">
+    <h1 className="home-header">Hem</h1>
+    </div>
+    </>
 )
 }
 
