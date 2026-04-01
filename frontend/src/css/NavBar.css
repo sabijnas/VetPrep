@@ -3,19 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.nav-links a {
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    background-color: #6b8a76;
 }
 
 .navbar a {
@@ -29,6 +30,38 @@
 .nav-logo {
     font-family: "DM Serif Display", serif;
     color: #2c322e;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: 5%;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsiv navbar för mindre skärmar */
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background: #5E7B68;
+        flex-direction: column;
+        width: 150px;
+        padding: 15px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a:hover {
+    background-color: #6b8a76;
+}
 }
