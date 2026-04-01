@@ -3,7 +3,7 @@ import "../css/NavViews.css";
 const ProjectIdea = () => {
   return (
     <>
-      <h1>Projektidé</h1>
+      <h1 className="headerViews">Projektidé</h1>
       <div className="projectIdea-card">
         <p>
           Projektidén är att utveckla en prototyp av applikationen VetPrep,

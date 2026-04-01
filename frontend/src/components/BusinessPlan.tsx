@@ -3,7 +3,7 @@ import "../css/NavViews.css";
 const BusinessPlan = () => {
   return (
     <>
-      <h1>Affärsplan</h1>
+      <h1 className="headerViews">Affärsplan</h1>
       <div className="buisnessPlan-card">
         <p>
           VetPrep är en applikation som hjälper djurägare att följa och

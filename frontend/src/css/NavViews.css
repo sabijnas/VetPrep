@@ -13,7 +13,35 @@
     color: #39413c;
 }
 
-.readMoreP, .buisnessPlan-card, .projectIdea-card {
+.readMoreP, .buisnessPlan-card, .projectIdea-card, .homeP {
     color: #39413c;
     font-family: "DM Sans", sans-serif;
+}
+
+.headerViews {
+    margin-top: 15px;
+    text-align: center;
+    color: #39413c;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    letter-spacing: 5%;
+}
+
+.home-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.headerHome {
+    text-align: left;
+    font-size: 3rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    color: #39413c;
+}
+
+.home-card {
+    text-align: left;
+    padding: 10px;
 }

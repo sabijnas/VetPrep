@@ -3,7 +3,7 @@ import "../css/NavViews.css"
 const ReadMore = () => {
   return (
     <>
-      <h1>Läs mer om VetPrep</h1>
+      <h1 className="headerViews">Läs mer om VetPrep</h1>
       <div className="readmore-card">
         <h3 className="readMoreHeader">Varför logga symptom och beteenden?</h3>
         <p className="readMoreP">
