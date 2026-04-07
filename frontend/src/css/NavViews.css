@@ -27,6 +27,12 @@
     font-family: "DM Sans", sans-serif;
 }
 
+.healthadvice-paragraph-italic {
+    font-style: italic;
+    color: #39413c;
+    font-family: "DM Sans", sans-serif;
+}
+
 .headerViews {
     margin-top: 15px;
     text-align: center;

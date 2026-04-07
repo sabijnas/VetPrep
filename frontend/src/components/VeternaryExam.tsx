@@ -4,7 +4,7 @@ const VeternaryExam = () => {
     const examItems = [
         "Ras, ålder, kön",
         "Aktuell kroppstemperatur (även djurets normala temperatur)",
-        "Allmänt beteende (t.ex slö, normal, orolig",
+        "Allmänt beteende (t.ex slö, normal, orolig)",
         "Andning (normal eller onormal",
         "Pälsen",
         "Aptiten",
