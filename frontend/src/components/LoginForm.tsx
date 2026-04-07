@@ -1,5 +1,7 @@
-const LoginForm = () => {
-
+const LogInForm = () => {
+return (
+    <h1>Hello</h1>
+)
 }
 
-export default LoginForm
+export default LogInForm
