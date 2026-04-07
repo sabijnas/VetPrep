@@ -1,10 +1,10 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import BusinessPlan from './components/BusinessPlan'
 import ProjectIdea from './components/ProjectIdea'
 import ReadMore from './components/ReadMore'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
+import HealthAdvice from './components/HealthAdvice'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div className="content">
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/Affärsplan" element={<BusinessPlan/>}/>
+        <Route path="/Hälsoråd" element={<HealthAdvice/>}/>
         <Route path="/Projektidé" element={<ProjectIdea/>}/>
         <Route path="/LäsMer" element={<ReadMore/>}/>
         <Route path="*" element={<h1>404 Not Found</h1>}/>

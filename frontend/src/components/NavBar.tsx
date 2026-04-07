@@ -17,7 +17,7 @@ const NavBar = () => {
           om false = nav-links visas */}
       <div className={isOpen ? "nav-links active" : "nav-links"}>
         <Link to="/" onClick={() => setIsOpen(false)}>Hem</Link>
-        <Link to="/Affärsplan" onClick={() => setIsOpen(false)}>Affärsplan</Link>
+        <Link to="/Hälsoråd" onClick={() => setIsOpen(false)}>Hälsoråd</Link>
         <Link to="/Projektidé" onClick={() => setIsOpen(false)}>Projektidé</Link>
         <Link to="/LäsMer" onClick={() => setIsOpen(false)}>Läs Mer</Link>
       </div>
