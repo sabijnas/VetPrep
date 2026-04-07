@@ -1,9 +1,9 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import ReadMore from './components/ReadMore'
+import ReadMore from './components/dashboardViews/ReadMore'
 import NavBar from './components/NavBar'
-import Home from './components/Home'
-import HealthAdvice from './components/HealthAdvice'
+import Home from './components/dashboardViews/Home'
+import HealthAdvice from './components/dashboardViews/HealthAdvice'
 
 function App() {
   return (

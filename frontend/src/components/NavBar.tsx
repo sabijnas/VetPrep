@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../css/NavBar.css";
+import "../css/Login.css";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -19,6 +20,7 @@ const NavBar = () => {
         <Link to="/" onClick={() => setIsOpen(false)}>Hem</Link>
         <Link to="/Hälsoråd" onClick={() => setIsOpen(false)}>Hälsoråd</Link>
         <Link to="/LäsMer" onClick={() => setIsOpen(false)}>Läs Mer</Link>
+        <button className="loginBtn">Logga In</button>
       </div>
     </nav>
   );
