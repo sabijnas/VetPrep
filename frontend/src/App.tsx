@@ -1,6 +1,5 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import ProjectIdea from './components/ProjectIdea'
 import ReadMore from './components/ReadMore'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
@@ -14,7 +13,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Hälsoråd" element={<HealthAdvice/>}/>
-        <Route path="/Projektidé" element={<ProjectIdea/>}/>
         <Route path="/LäsMer" element={<ReadMore/>}/>
         <Route path="*" element={<h1>404 Not Found</h1>}/>
       </Routes>
