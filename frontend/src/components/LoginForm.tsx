@@ -1,4 +1,4 @@
-import "../css/LogIn.css";
+import "../css/Login.css";
 import { useState } from "react";
 
 const LoginForm = () => {
@@ -38,6 +38,9 @@ const LoginForm = () => {
             <button type="submit">Registrera</button>
           </form>
         )}
+      </div>{" "}
+      <div className="cat-container">
+        <img src="src/assets/cat.png" className="cat" />
       </div>
     </div>
   );
