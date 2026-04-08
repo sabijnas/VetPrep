@@ -1,4 +1,5 @@
 # Kravlista 
+<br/>
 1. Uppfyllt - samma gitrepo, har använt mig av olika branches. Första inlämingen är i branch setup och denna inlämingen ligger i branch deploy.
 <br/>
 2. Uppfyllt - en readme fil finns med beskrivning hur man bygger och besöker applikationen.
@@ -27,4 +28,4 @@
 <br/>
 15. Uppfyllt - ja egen CSS finns, jag har valt att samla CSS-filer i en separat mapp (css) där har komponenterna egna CSS-filer som gör det enklare att navigera när projketet blir större.
 <br/>
-16. Uppfyllt - ja egen CSS ger komponenter rörelse, tillexempel i LoginForm.tsx ändrar klassen slider position när isLogin ändras (true/false), detta ger en glidande rörelse mellan Logga in och Registera knapparna. 
+16. Uppfyllt - egen CSS ger komponenter rörelse, tillexempel i LoginForm.tsx ändrar klassen slider position när isLogin ändras (true/false), detta ger en glidande rörelse mellan Logga in och Registera knapparna. 
