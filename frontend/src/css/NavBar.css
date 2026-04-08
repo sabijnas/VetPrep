@@ -16,13 +16,15 @@
 }
 
 .nav-links a.loginBtn {
-    background-color: #EAB1E3;
+    background: linear-gradient(135deg, #EAB1E3, #c47bbc);
     border-radius: 999px;
-    padding: 8px 16px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
 }
 
 .nav-links a.loginBtn:hover {
-    background-color: #c47bbc;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(196, 123, 188, 0.5);
 }
 
 .nav-links a {
@@ -52,7 +54,6 @@
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
     letter-spacing: 3%;
-
 }
 
 .nav-logo {
