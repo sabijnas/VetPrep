@@ -13,6 +13,17 @@
     border: 1px solid #39413c85;
     border-radius: 10px;
     position: relative;
+    animation: cardEnter 500ms ease-out;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0; 
+        transform: translateY(16px) scale(0.98);
+    } to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .button-group {
@@ -31,7 +42,7 @@
     font-weight: bold;
     z-index: 2;
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
     color: #2c322e;
     font-family: "DM Serif Display", serif;
     letter-spacing: 5%;
@@ -39,19 +50,18 @@
 
 .slider {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #FFD7FA;
-    border-radius: 999px;
-    transition: all 0.3s ease;
+    top: 3px;
+    left: 3px;
+    width: calc(50% - 6px);
+    height: calc(100% - 6px);
+    background: linear-gradient(135deg, #FFD7FA 0%, #ffeafb 100%);
+    box-shadow: 0 3px 0px #eac4e5;
     z-index: 1;
 }
 
 .slider.slide-right {
-    left: 50%;
-    background-color: #5E7B68;
+    background: linear-gradient(135deg, #5E7B68 0%, #7f9a88 100%);
+    box-shadow: 0 3px 0px rgba(94, 123, 104, 0.35);
 }
 
 .form {
@@ -65,6 +75,14 @@
     border-radius: 4px;
     border: 1px solid #39413c85;
     font-size: 13px;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #5E7B68;
+    box-shadow: 0 0 0 4px rgba(94, 123, 104, 0.18);
+    transform: translateY(-1px);
 }
 
 .form button {
@@ -76,6 +94,13 @@
     cursor: pointer;
     font-family: "DM Serif Display", serif;
     font-size: 14px;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+    box-shadow: 0 8px 18px rgba(255, 215, 250, 0.45);
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+    background-color: #ffd0f6;
 }
 
 .loginformHeader {
