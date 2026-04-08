@@ -4,7 +4,7 @@ import ReadMore from './components/dashboardViews/ReadMore'
 import NavBar from './components/NavBar'
 import Home from './components/dashboardViews/Home'
 import HealthAdvice from './components/dashboardViews/HealthAdvice'
-import LogInForm from './components/LoginForm'
+import LogInForm from './components/LogInPage'
 
 function App() {
   return (
