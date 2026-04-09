@@ -114,6 +114,8 @@
 }
 
 .info-icons i {
+    transition: transform 220ms ease, box-shadow 220ms ease, backgrounnd-color 220ms ease;
+    box-shadow: 0 6px 16px rgba(44, 50, 46, 0.25);
     background-color: #2c322e;
     color: #5E7B68;
     border-radius: 50%;
@@ -143,6 +145,17 @@
     width: 210px;
 }
 
+.info-card:hover .info-icons i {
+    transform: scale(1.07) rotate(-4deg);
+    background-color: #39413c;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: #473d3b4d;
+}
+
+
 @media (max-width: 600px) {
     .home-text-logo {
         flex-direction: column;
@@ -168,7 +181,7 @@
         text-align: center;
     }
 
-    home-card {
+    .home-card {
         padding: 0;
     }
 }
