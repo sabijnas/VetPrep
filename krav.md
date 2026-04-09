@@ -1,6 +1,6 @@
 # Kravlista 
 <br/>
-1. Uppfyllt - samma gitrepo, har använt mig av olika branches. Första inlämingen är i branch setup och denna inlämingen ligger i branch deploy.
+1. Uppfyllt - samma gitrepo, har använt mig av olika branches. Första inlämingen är i branch setup och denna inlämingen ligger i branch deploy. (Vid inläming kommer jag merga deploy in till main)
 <br/>
 2. Uppfyllt - en readme fil finns med beskrivning hur man bygger och besöker applikationen.
 <br/>
