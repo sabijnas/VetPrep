@@ -1,4 +1,5 @@
 # Kravlista 
+###### Lista på krav jag anser att jag uppfyllt/inte uppfyllt
 <br/>
 1. Uppfyllt - samma gitrepo, har använt mig av olika branches. Första inlämingen är i branch setup och denna inlämingen ligger i branch deploy. (Vid inläming kommer jag merga deploy in till main)
 <br/>
