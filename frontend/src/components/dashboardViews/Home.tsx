@@ -1,4 +1,5 @@
 import "../../css/NavViews.css";
+import dog from "../../assets/dog.png"
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           lättare för veterinären att förstå helheten. Håll koll. Spara tid.
           Hjälp ditt djur att må bra.{" "}
         </p> 
-        <img className="dog-photo" src="src/assets/dog.png" alt="dog" />
+        <img className="dog-photo" src={dog} alt="dog" />
         </div>
         <div className="info-wrapper">
           <div className="info-card">
