@@ -147,7 +147,7 @@
 
 .info-card:hover .info-icons i {
     transform: scale(1.07) rotate(-4deg);
-    background-color: #39413c;
+    background-color: #ffffff;
 }
 
 .info-card:hover {
