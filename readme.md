@@ -12,4 +12,4 @@ Du kan antigen klona ner repot eller ladda ner projektet som ZIP från GitHub oc
 Installera beroenden: npm install (obs! se till att du är inne i frontend mappen, du kan navigera till den genom att skriva "ls" och sedan "cd frontend" i terminalen) <br/>
 Starta server: npm run dev <br/>
 Öppna sedan applikationen i webbläsaren via den adress som visas i terminalen (oftast http://localhost:5173).
-Just nu finns det bara en enkel navigationsmeny i applikationen där man kan navigera mellan olika sidor: Hem, Projektidé, Affärsplan och Läs mer. 
+Just nu finns det bara en enkel navigationsmeny i applikationen där man kan navigera mellan hem, hälsoråd, läs mer och logga in. Ingen funktion finns ännu i applikationen, det vill säga det går inte att logga in eller registera ett konto.

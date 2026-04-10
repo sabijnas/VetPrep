@@ -1,4 +1,5 @@
 import "../css/Login.css";
+import cat from "../assets/cat.png"
 import { useState } from "react";
 
 const LoginForm = () => {
@@ -40,7 +41,7 @@ const LoginForm = () => {
         )}
       </div>{" "}
       <div className="cat-container">
-        <img src="src/assets/cat.png" className="cat" />
+        <img src={cat} className="cat" alt="cat" />
       </div>
     </div>
   );

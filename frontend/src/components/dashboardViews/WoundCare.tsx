@@ -1,4 +1,5 @@
 import "../../css/NavViews.css";
+import bandage from "../../assets/bandage.png"
 
 const WoundCare = () => {
     const woundCareItems = [
@@ -18,7 +19,7 @@ const WoundCare = () => {
             ))}
         </ul>
         <p className="healthadvice-paragraph">Såhär kan du lägga ett enkelt tassbandage</p>
-        <img className="bandage-photo" src="src/assets/bandage.png" alt="paw bandage" />
+        <img className="bandage-photo" src={bandage} alt="paw bandage" />
     </div>
     )
 }
