@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../css/NavBar.css";
+import "../css/LogIn.css";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -17,9 +18,9 @@ const NavBar = () => {
           om false = nav-links visas */}
       <div className={isOpen ? "nav-links active" : "nav-links"}>
         <Link to="/" onClick={() => setIsOpen(false)}>Hem</Link>
-        <Link to="/Affärsplan" onClick={() => setIsOpen(false)}>Affärsplan</Link>
-        <Link to="/Projektidé" onClick={() => setIsOpen(false)}>Projektidé</Link>
+        <Link to="/Hälsoråd" onClick={() => setIsOpen(false)}>Hälsoråd</Link>
         <Link to="/LäsMer" onClick={() => setIsOpen(false)}>Läs Mer</Link>
+        <Link to="/LogIn" className="loginBtn" onClick={() => setIsOpen(false)}>Logga In</Link>
       </div>
     </nav>
   );

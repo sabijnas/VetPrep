@@ -1,4 +1,4 @@
-import "../css/NavViews.css"
+import "../../css/NavViews.css"
 
 const ReadMore = () => {
   return (
