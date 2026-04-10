@@ -168,6 +168,10 @@
         margin: 0;
     }
 
+    .bandage-photo {
+        max-width: 350px;
+    }
+
     .dog-photo {
         display: none;
     }
