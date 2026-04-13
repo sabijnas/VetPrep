@@ -1,5 +1,5 @@
 import "../css/Login.css";
-import cat from "../assets/cat.png"
+import cat from "../assets/cat.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,17 +10,22 @@ const LoginForm = () => {
 
   const navigate = useNavigate();
 
-  const handleSumbit = (e: { preventDefault: () => void; }) => {
+  const handleSumbit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const hardcodedEmail = "test@mail.com"
-    const hardcodedPassword = "1234";
 
-    if (email === hardcodedEmail && password === hardcodedPassword) {
-      navigate("/LoggedInUser")
+    const hardcodedUser = {
+      email: "test@mail.com",
+      password: "1234",
+      name: "Test",
+      pet: "Kevin"
+    };
+
+    if (email === hardcodedUser.email && password === hardcodedUser.password) {
+      navigate("/LoggedInUser", { state: hardcodedUser });
     } else {
-      alert ("fel mejl eller lösenord")
+      alert("fel mejl eller lösenord");
     }
-  }
+  };
 
   return (
     <div className="loginForm-card">
@@ -43,8 +48,18 @@ const LoginForm = () => {
 
         {isLogin ? (
           <form className="form" onSubmit={handleSumbit}>
-            <input type="email" placeholder="Mejl" value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <input type="password" placeholder="Lösenord" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input
+              type="email"
+              placeholder="Mejl"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Lösenord"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <button type="submit">Logga in</button>
           </form>
         ) : (
