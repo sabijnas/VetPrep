@@ -17,10 +17,11 @@ const LoginForm = () => {
       email: "test@mail.com",
       password: "1234",
       name: "Test",
-      pet: "Kevin"
+      pet: "Kevin",
     };
 
     if (email === hardcodedUser.email && password === hardcodedUser.password) {
+      sessionStorage.setItem("user", JSON.stringify(hardcodedUser));
       navigate("/LoggedInUser", { state: hardcodedUser });
     } else {
       alert("fel mejl eller lösenord");
