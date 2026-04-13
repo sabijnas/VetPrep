@@ -5,7 +5,7 @@ import NavBar from './components/NavBar'
 import Home from './components/dashboardViews/Home'
 import HealthAdvice from './components/dashboardViews/HealthAdvice'
 import LogInForm from './components/LogInPage'
-import LoggedInUser from './components/LoggedInUser'
+import LoggedInUser from './components/loggedInViews/LoggedInUser'
 
 function App() {
   return (
