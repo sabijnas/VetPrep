@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import Home from './components/dashboardViews/Home'
 import HealthAdvice from './components/dashboardViews/HealthAdvice'
 import LogInForm from './components/LogInPage'
+import LoggedInUser from './components/LoggedInUser'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Hälsoråd" element={<HealthAdvice/>}/>
         <Route path="/LäsMer" element={<ReadMore/>}/>
         <Route path="/LogIn" element={<LogInForm/>}/>
+        <Route path="/LoggedInUser" element={<LoggedInUser/>}/>
         <Route path="*" element={<h1 className="notFoundError">404 Not Found</h1>}/>
       </Routes>
       </div>

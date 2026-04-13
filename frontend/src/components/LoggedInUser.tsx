@@ -1,0 +1,7 @@
+const LoggedInUser = () => {
+    return (
+        <h1>Hello</h1>
+    )
+}
+
+export default LoggedInUser
