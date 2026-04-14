@@ -38,21 +38,20 @@ const NavBar = () => {
           Läs Mer
         </Link>
         {storedUser ? (
-          <button
-            className="loginBtn"
-            onClick={() => {
-              handleLogout();
-              setIsOpen(false);
-            }}
-          >
-            Logga ut
+          <>
+          <Link to="/LoggedInUser" onClick={() => setIsOpen(false)}>
+          Min sida
+          </Link>
+          <button 
+          className="loginBtn"
+          onClick={() => {
+            handleLogout();
+            setIsOpen(false);
+          }}> Logga Ut
           </button>
-        ) : (
-          <Link
-            to="/Login"
-            className="loginBtn"
-            onClick={() => setIsOpen(false)}
-          >
+          </>
+        ) : ( 
+          <Link to="/LogIn" className="loginBtn" onClick={() => setIsOpen(false)}>
             Logga In
           </Link>
         )}
