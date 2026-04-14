@@ -1,6 +1,63 @@
 .headerLoggedIn {
   font-family: "DM Serif Display", serif;
   color: #2c322e;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 400;
+}
+
+.paragraphLoggedIn {
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 10px;
+  color: #39413c;
+  margin-top: 8px;
+}
+
+.headerLoggedIn, .paragraphLoggedIn {
+  margin-left: 20px;
+}
+
+.p-row {
+  font-family: "DM sans", sans-serif;
+  color: #39413c;
+}
+
+.p-info {
+  font-family: "DM sans", sans-serif;
+  color: #39413c;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.status-icon {
+  color: #39413c;
+  font-size: 1.2rem;
+}
+
+.statuslog-wrapper {
+  margin-left: 20px;
+  display: flex;
+  gap: 2rem;
+}
+
+.statuslog-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.statuslog-card {
+  border: 1px solid #39413c85;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.healthlog-header {
+  font-family: "DM Serif Display", serif;
+  margin-left: 20px;
+  font-weight: 400;
+  margin-top: 50px;
+  font-size: 1.2rem;
 }

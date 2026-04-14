@@ -4,23 +4,43 @@ const Statuslog = () => {
   return (
     <div className="statuslog-wrapper">
       <div className="statuslog-card">
-        <p>Senaste besöket</p>
-        <p>31 dagar sedan</p>
+        <div className="statuslog-row">
+        <p className="p-row">Senaste besöket</p>
+        <div className="status-icon">
+        <i className="fa-regular fa-calendar"></i>
+        </div>
+        </div>
+        <p className="p-info">31 dagar sedan</p>
       </div>
 
       <div className="statuslog-card">
-        <p>Akutell vikt</p>
-        <p>7 kg</p>
+        <div className="statuslog-row">
+        <p className="p-row">Akutell vikt</p>
+        <div className="status-icon">
+        <i className="fa-solid fa-dumbbell"></i>
+        </div>
+        </div>
+        <p className="p-info">7 kg</p>
       </div>
 
       <div className="statuslog-card">
-        <p>Aktivitetsnivå</p>
-        <p>Medel</p>
+        <div className="statuslog-row">
+        <p className="p-row">Aktivitetsnivå</p>
+        <div className="status-icon">
+        <i className="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        </div>
+        <p className="p-info">Medel</p>
       </div>
 
       <div className="statuslog-card">
-        <p>Hälsostatus</p>
-        <p>Utmärkt</p>
+        <div className="statuslog-row">
+        <p className="p-row">Hälsostatus</p>
+        <div className="status-icon">
+        <i className="fa-regular fa-heart"></i>
+        </div>
+        </div>
+        <p className="p-info">Utmärkt</p>
       </div>
     </div>
   );

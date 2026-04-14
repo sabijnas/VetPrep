@@ -19,6 +19,8 @@ const LoggedInUser = () => {
             <h1 className="headerLoggedIn">Välkommen {user?.name}</h1>
             <p className="paragraphLoggedIn"> Statuslogg för {user?.pet}</p>
             <Statuslog/>
+            <h3 className="healthlog-header">Hälsologg</h3>
+            <p className="paragraphLoggedIn"> Följ {user?.pet}s hälsa över tid</p>
         </div>
     )
 }
