@@ -7,9 +7,18 @@ Idén till VetPrep uppstod under en affärsmannaskapskurs och bygger på en pers
 
 ### Start och användning
 Applikationen ligger live på https://shark-app-p84vh.ondigitalocean.app om du istället vill köra projektet lokalt på din dator, gör såhär: <br/>
-Se till att du har Node.js och npm installerat på din dator. <br/>
-Du kan antigen klona ner repot eller ladda ner projektet som ZIP från GitHub och extrahera det. Öpnna sedan projektet i din kodeditor och öppna terminalen <br/>
-Installera beroenden: npm install (obs! se till att du är inne i frontend mappen, du kan navigera till den genom att skriva "ls" och sedan "cd frontend" i terminalen) <br/>
-Starta server: npm run dev <br/>
-Öppna sedan applikationen i webbläsaren via den adress som visas i terminalen (oftast http://localhost:5173).
-Just nu finns det bara en enkel navigationsmeny i applikationen där man kan navigera mellan hem, hälsoråd, läs mer och logga in. Ingen funktion finns ännu i applikationen, det vill säga det går inte att logga in eller registera ett konto.
+```bash 
+Se till att du har Node.js och npm installerat på datorn
+```
+```bash 
+Du kan antigen klona ner repot eller ladda ner projektet som ZIP från Github och extrahera det, öppna sedan projektet i din kodeditor och öppna terminalen
+```
+```bash 
+Installera beroenden: npm install (OBS! se till att du är inne i frontend mappen, du kan navigera till den genom att skriva "ls" och sedan "cd frontend" i terminalen)
+```
+```bash 
+Starta server: npm run dev
+```
+```bash
+Öppna applikationen i webbläsaren via den adress som visas i terminalen (ofast http://localhost:5173).
+```
