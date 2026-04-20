@@ -20,5 +20,5 @@ Installera beroenden: npm install (OBS! se till att du är inne i frontend mappe
 Starta server: npm run dev
 ```
 ```bash
-Öppna applikationen i webbläsaren via den adress som visas i terminalen (ofast http://localhost:5173).
+Öppna applikationen i webbläsaren via den adress som visas i terminalen (oftast http://localhost:5173)
 ```
