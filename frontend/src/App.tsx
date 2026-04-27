@@ -21,7 +21,6 @@ function App() {
         <Route path="*" element={<h1 className="notFoundError">404 Not Found</h1>}/>
       </Routes>
       </div>
-      <footer>© 2026 VetPrep</footer>
    </div>
   )
 }

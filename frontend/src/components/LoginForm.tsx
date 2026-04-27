@@ -1,5 +1,4 @@
 import "../css/Login.css";
-import cat from "../assets/cat.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -27,20 +26,29 @@ const LoginForm = () => {
       alert("fel mejl eller lösenord");
     }
   };
-
   return (
-    <div className="loginForm-card">
+    <section className="loginForm-card">
       <div className="loginContent">
-        <div className="button-group">
+        <div
+          className="button-group"
+          role="tablist"
+          aria-label="Inloggning eller registrering"
+        >
           <button
             className={isLogin ? "active" : ""}
             onClick={() => setIsLogin(true)}
+            type="button"
+            role="tab"
+            aria-selected={isLogin}
           >
             Logga in
           </button>
           <button
             className={!isLogin ? "active" : ""}
             onClick={() => setIsLogin(false)}
+            type="button"
+            role="tab"
+            aria-selected={!isLogin}
           >
             Registrera
           </button>
@@ -72,11 +80,12 @@ const LoginForm = () => {
             <button type="submit">Registrera</button>
           </form>
         )}
-      </div>{" "}
-      <div className="cat-container">
-        <img src={cat} className="cat" alt="cat" />
+
+        <p className="form-footnote">
+          Genom att fortsätta godkänner du våra användarvillkor.
+        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
