@@ -4,6 +4,7 @@ import Statuslog from "./Statuslog";
 import "../../css/LoggedInUser.css";
 import Healthlog from "./Healthlog";
 import AddToLog from "./AddToLog";
+import exportToPDF from "./ExportToPDF";
 
 const LoggedInUser = () => {
   const location = useLocation();
@@ -33,7 +34,7 @@ const LoggedInUser = () => {
           <p className="paragraphLoggedIn">Följ {user?.pet}s hälsa över tid</p>
           <div className="log-actions">
             <button className="log-action-btn" onClick={() => setShowAddToLog(true)}>Lägg till i logg</button>
-            <button className="log-action-btn log-action-secondary">
+            <button className="log-action-btn log-action-secondary" onClick={exportToPDF}>
               Exportera logg till pdf
             </button>
           </div>
