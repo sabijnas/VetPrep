@@ -13,7 +13,7 @@
   margin-bottom: 18px;
 }
 
-.login-pageBadge {
+.login-pageBadge, .headerTearms  {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -27,6 +27,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 16px;
+}
+
+.headerTearms { 
+  margin-top: 10px;
 }
 
 .loginformHeader {
@@ -166,7 +170,7 @@
   transform: translateY(-1px);
 }
 
-.form button {
+.form button, .closeTermsBtn {
   margin-top: 6px;
   padding: 12px;
   border: none;
@@ -185,10 +189,14 @@
   box-shadow: 0 12px 24px rgba(94, 123, 104, 0.28);
 }
 
-.form button:hover {
+.form button:hover,  .closeTermsBtn:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #4b6253 0%, #6f8f7d 100%);
   box-shadow: 0 14px 26px rgba(75, 98, 83, 0.35);
+}
+
+.closeTermsBtn {
+  font-size: 12px;
 }
 
 .form-footnote {
@@ -197,6 +205,19 @@
   font-family: "DM Sans", sans-serif;
   font-size: 0.78rem;
   line-height: 1.45;
+}
+
+.tearmsText {
+  font-weight: bold;
+  color: #54625b;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tearms-form {
+  color: #39413c;
+  font-family: "DM Sans", sans-serif; 
+  font-size: 0.8rem;
 }
 
 @media (max-width: 900px) {
