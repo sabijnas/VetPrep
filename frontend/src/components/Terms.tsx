@@ -4,8 +4,8 @@ type TermsProps = {
 
 const Terms = ({ onClose }: TermsProps) => {
 return (
-    <div className="" onClick={onClose}>
-    <div className="" onClick={(e) => e.stopPropagation}>
+    <div onClick={onClose}>
+    <div onClick={(e) => e.stopPropagation}>
 
         <h2 className="headerTerms">Användarvillkor</h2>
 
@@ -18,7 +18,7 @@ return (
             <br />
             ● Applikationen samlar in följande personuppgifter: namn, e-post, lösenord, djurets namn, hälsologgar. Ingen information delas med tredje part.
             <br />
-            ● Vid misstanke om sjukdom eller akuta symtom ska du alltid i första hand kontakta en legitermad veterinär.
+            ● Vid misstanke om sjukdom eller akuta symtom ska du alltid i första hand kontakta en legitimerad veterinär.
         </div>
         <button className="closeTermsBtn" onClick={onClose}>Stäng</button>
    </div> </div>

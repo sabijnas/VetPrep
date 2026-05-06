@@ -248,12 +248,14 @@
 
   .loginForm-card {
     padding: 0 16px 48px;
-    gap: 12px;
+    gap: 10px;
   }
 
   .loginContent {
-    padding: 18px;
-    border-radius: 18px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
   }
 
   .form-subtitle {
