@@ -7,9 +7,9 @@ return (
     <div className="" onClick={onClose}>
     <div className="" onClick={(e) => e.stopPropagation}>
 
-        <h2 className="headerTearms">Användarvillkor</h2>
+        <h2 className="headerTerms">Användarvillkor</h2>
 
-        <div className="tearms-form"> 
+        <div className="terms-form"> 
             Dessa användarvillkor gäller för användningen av VetPrep, genom att skapa ett konto och använda applikationen godkänner du villkoren nedan. Applikationen är ett skolprojekt och tillhandahålls i befintligt skick utan garanti för funktion, tillgänglighet eller korrekthet.
             <br /> <br />
             ● Applikationen är inte en medicinsk tjänst och ersätter inte professionell veterinärvård. All information i VetPrep är endast avsedd som stöd för dig som djurägare.

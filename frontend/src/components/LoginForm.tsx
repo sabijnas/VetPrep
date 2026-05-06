@@ -85,7 +85,7 @@ const LoginForm = () => {
 
         <p className="form-footnote">
           Genom att fortsätta godkänner du våra {""}
-          <span className="tearmsText" onClick={() => setShowTerms(true)}>användarvillkor</span>
+          <span className="termsText" onClick={() => setShowTerms(true)}>användarvillkor</span>
         </p>
 
         {showTerms && (

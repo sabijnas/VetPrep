@@ -13,7 +13,7 @@
   margin-bottom: 18px;
 }
 
-.login-pageBadge, .headerTearms  {
+.login-pageBadge, .headerTerms  {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -29,7 +29,7 @@
   margin-bottom: 16px;
 }
 
-.headerTearms { 
+.headerTerms { 
   margin-top: 10px;
 }
 
@@ -207,14 +207,14 @@
   line-height: 1.45;
 }
 
-.tearmsText {
+.termsText {
   font-weight: bold;
   color: #54625b;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.tearms-form {
+.terms-form {
   color: #39413c;
   font-family: "DM Sans", sans-serif; 
   font-size: 0.8rem;
