@@ -1,11 +1,13 @@
 import "../css/Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Terms from "./Terms";
 
 const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true); // true = login, false = register
   const [email, setEmail] = useState(""); //hårdkoda email + lösen för inlogging
   const [password, setPassword] = useState("");
+  const [showTerms, setShowTerms] = useState(false);
 
   const navigate = useNavigate();
 
@@ -82,8 +84,13 @@ const LoginForm = () => {
         )}
 
         <p className="form-footnote">
-          Genom att fortsätta godkänner du våra användarvillkor.
+          Genom att fortsätta godkänner du våra {""}
+          <span className="tearmsText" onClick={() => setShowTerms(true)}>användarvillkor</span>
         </p>
+
+        {showTerms && (
+          <Terms onClose={() => setShowTerms(false)}/>
+        )}
       </div>
     </section>
   );
