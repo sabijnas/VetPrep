@@ -1,26 +1,60 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/NavBar.css";
-import "../css/LogIn.css";
+import "../css/Login.css";
 import { useState } from "react";
 
 const NavBar = () => {
   /* isOpen = om menyn är öppen true/false 
      setIsOpen = funktion för att ändra värdet */
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const storedUser = JSON.parse(sessionStorage.getItem("user") || "null");
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <nav className="navbar">
       <p className="nav-logo">VetPrep</p>
-      
+
       {/* Vid klick växlas true/false */}
-      <div className="hamburger-menu" onClick={() => setIsOpen(!isOpen)}>≡</div>
-      
+      <div className="hamburger-menu" onClick={() => setIsOpen(!isOpen)}>
+        ≡
+      </div>
+
       {/* isOpen = true, lägg till active (menyn visas på mindre skärmar)
           om false = nav-links visas */}
       <div className={isOpen ? "nav-links active" : "nav-links"}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Hem</Link>
-        <Link to="/Hälsoråd" onClick={() => setIsOpen(false)}>Hälsoråd</Link>
-        <Link to="/LäsMer" onClick={() => setIsOpen(false)}>Läs Mer</Link>
-        <Link to="/LogIn" className="loginBtn" onClick={() => setIsOpen(false)}>Logga In</Link>
+        <Link to="/" onClick={() => setIsOpen(false)}>
+          Hem
+        </Link>
+        <Link to="/Hälsoråd" onClick={() => setIsOpen(false)}>
+          Hälsoråd
+        </Link>
+        <Link to="/LäsMer" onClick={() => setIsOpen(false)}>
+          Läs Mer
+        </Link>
+        {storedUser ? (
+          <>
+          <Link to="/LoggedInUser" onClick={() => setIsOpen(false)}>
+          Min sida
+          </Link>
+          <button 
+          className="loginBtn"
+          onClick={() => {
+            handleLogout();
+            setIsOpen(false);
+          }}> Logga Ut
+          </button>
+          </>
+        ) : ( 
+          <Link to="/LogIn" className="loginBtn" onClick={() => setIsOpen(false)}>
+            Logga In
+          </Link>
+        )}
       </div>
     </nav>
   );
