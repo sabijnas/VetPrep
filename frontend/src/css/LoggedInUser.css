@@ -1,83 +1,454 @@
+.loggedin-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.loggedin-hero {
+  border: 1px solid rgba(57, 65, 60, 0.12);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 242, 0.9) 100%);
+  box-shadow: 0 24px 60px rgba(44, 50, 46, 0.08);
+  padding: 26px;
+  margin-bottom: 20px;
+}
+
+.loggedin-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(94, 123, 104, 0.12);
+  color: #5e7b68;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 .headerLoggedIn {
   font-family: "DM Serif Display", serif;
   color: #2c322e;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 0.95;
 }
 
 .paragraphLoggedIn {
   font-family: "DM Sans", sans-serif;
-  margin-bottom: 10px;
+  margin-top: 14px;
   color: #39413c;
-  margin-top: 8px;
-}
-
-.headerLoggedIn, .paragraphLoggedIn {
-  margin-left: 20px;
-}
-
-.p-row {
-  font-family: "DM sans", sans-serif;
-  color: #39413c;
-}
-
-.p-info {
-  font-family: "DM sans", sans-serif;
-  color: #39413c;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.status-icon {
-  color: #39413c;
-  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 .statuslog-wrapper {
-  display: flex;
-  width: 100%;
-  gap: 2rem;
-  padding: 0 20px;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.statuslog-card,
+.healthlog-card {
+  border: 1px solid rgba(57, 65, 60, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 34px rgba(44, 50, 46, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .statuslog-card {
-  flex: 1;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.statuslog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  border-radius: 22px 0 0 22px;
+  background: rgba(94, 123, 104, 0.38);
+}
+
+.statuslog-card:hover,
+.healthlog-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(94, 123, 104, 0.25);
+  box-shadow: 0 20px 40px rgba(44, 50, 46, 0.12);
 }
 
 .statuslog-row {
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  align-items: center;
+  gap: 12px;
 }
 
-.statuslog-card, .healthlog-card {
-  border: 1px solid #39413c85;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px;
-  border-radius: 10px;
+.p-row {
+  font-family: "DM Sans", sans-serif;
+  color: #39413c;
+  font-size: 0.95rem;
+}
+
+.p-info {
+  font-family: "DM Sans", sans-serif;
+  color: #2c322e;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.status-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.96rem;
+  border: 1px solid rgba(57, 65, 60, 0.18);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.statuslog-card--visit::before {
+  background: #7a9687;
+}
+
+.statuslog-card--weight::before {
+  background: #6d8ba3;
+}
+
+.statuslog-card--activity::before {
+  background: #8a7db0;
+}
+
+.statuslog-card--health::before {
+  background: #b47080;
+}
+
+.status-icon--visit {
+  color: #4f675a;
+  border-color: rgba(79, 103, 90, 0.28);
+  background: rgba(122, 150, 135, 0.14);
+}
+
+.status-icon--weight {
+  color: #3f5d75;
+  border-color: rgba(63, 93, 117, 0.28);
+  background: rgba(109, 139, 163, 0.16);
+}
+
+.status-icon--activity {
+  color: #5a4f83;
+  border-color: rgba(90, 79, 131, 0.3);
+  background: rgba(138, 125, 176, 0.18);
+}
+
+.status-icon--health {
+  color: #8a3f52;
+  border-color: rgba(138, 63, 82, 0.3);
+  background: rgba(180, 112, 128, 0.18);
+}
+
+.log-info {
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(57, 65, 60, 0.12);
+  border-radius: 24px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 14px 34px rgba(44, 50, 46, 0.08);
 }
 
 .healthlog-header {
   font-family: "DM Serif Display", serif;
-  margin-left: 20px;
-  font-weight: 400;
-  margin-top: 50px;
-  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c322e;
+  font-size: 1.6rem;
+}
+
+.log-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.log-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.log-action-btn {
+  padding: 10px 15px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5e7b68 0%, #7d9a88 100%);
+  color: #f7f7f2;
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 12px 24px rgba(94, 123, 104, 0.22);
+}
+
+.log-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(94, 123, 104, 0.28);
+}
+
+.log-action-secondary {
+  border: 1px solid rgba(57, 65, 60, 0.18);
+  color: #39413c;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+}
+
+.log-action-secondary:hover {
+  box-shadow: 0 8px 16px rgba(57, 65, 60, 0.12);
+}
+
+.healthlog-list {
+  display: grid;
+  gap: 16px;
 }
 
 .healthlog-card {
-  margin: 20px;
-  gap: 1.2rem;
+  padding: 20px;
 }
 
-.healthlog-row {
+.healthlog-row,
+.healthlog-under-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.healthlog-row i {
+.healthlog-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #2c322e;
+}
+
+.healthlog-date {
+  margin-top: 6px;
+  font-family: "DM Sans", sans-serif;
+  color: #5f6a64;
+  font-size: 0.92rem;
+}
+
+.healthlog-under-row {
+  margin-top: 10px;
+}
+
+.healthlog-note {
+  font-family: "DM Sans", sans-serif;
+  color: #39413c;
+  line-height: 1.6;
+}
+
+.healthlog-action {
   margin-left: auto;
+  color: #39413c;
+  cursor: pointer;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.healthlog-action:hover {
+  color: #5e7b68;
+  transform: translateY(-1px);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: min(560px, 92vw);
+  max-width: 92vw;
+  border: 1px solid rgba(57, 65, 60, 0.15);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 245, 242, 0.92) 100%);
+  box-shadow: 0 26px 64px rgba(44, 50, 46, 0.2);
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.addlog-form {
+  display: grid;
+  gap: 14px;
+}
+
+.addlog-head {
+  margin-bottom: 2px;
+}
+
+.addlog-title {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  color: #2c322e;
+  font-size: 1.7rem;
+}
+
+.addlog-intro {
+  margin: 10px 0 0;
+  font-family: "DM Sans", sans-serif;
+  color: #39413c;
+  line-height: 1.6;
+}
+
+.addlog-field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.addlog-label {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: #2c322e;
+  font-size: 0.92rem;
+}
+
+.addlog-input,
+.addlog-textarea,
+.addlog-input-file {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(57, 65, 60, 0.25);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #39413c;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.92rem;
+  padding: 12px 13px;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.addlog-input-file {
+  padding: 9px 13px;
+  overflow: hidden;
+}
+
+.addlog-input-file::file-selector-button {
+  margin-right: 10px;
+  border: 1px solid rgba(57, 65, 60, 0.2);
+  border-radius: 999px;
+  padding: 7px 11px;
+  background: rgba(94, 123, 104, 0.12);
+  color: #2c322e;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.addlog-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.addlog-input:focus,
+.addlog-textarea:focus,
+.addlog-input-file:focus {
+  outline: none;
+  border-color: #5e7b68;
+  box-shadow: 0 0 0 4px rgba(94, 123, 104, 0.18);
+  transform: translateY(-1px);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.modal-close-btn {
+  padding: 10px 15px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5e7b68 0%, #7d9a88 100%);
+  color: #f7f7f2;
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 12px 24px rgba(94, 123, 104, 0.22);
+}
+
+.modal-close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(94, 123, 104, 0.28);
+}
+
+.modal-close-btn--secondary {
+  border: 1px solid rgba(57, 65, 60, 0.18);
+  color: #39413c;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+}
+
+.modal-close-btn--secondary:hover {
+  box-shadow: 0 8px 16px rgba(57, 65, 60, 0.12);
+}
+
+@media (max-width: 980px) {
+  .statuslog-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .log-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .loggedin-wrapper {
+    padding: 20px 16px 48px;
+  }
+
+  .loggedin-hero {
+    padding: 20px;
+  }
+
+  .statuslog-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .healthlog-header {
+    font-size: 1.35rem;
+  }
+
+  .modal-content {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .modal-actions {
+    width: 100%;
+  }
+
+  .modal-close-btn {
+    flex: 1;
+  }
 }
