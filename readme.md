@@ -18,5 +18,7 @@ Applikationen ligger live på https://shark-app-p84vh.ondigitalocean.app om du i
 - När du är inne i backend mappen, kör servern genom att skriva in "" OBS! detta är viktigt eftersom att API anropen hämtar från denna endpoint.  
 - 
 
+#### Hur hänger backend och frontend ihop?
+
 ### Hur används API:et, vilka endpoint finns? 
 Krav på att två komponeter ska hämta data (GET), minst en endpoint ska ha impementerat (POST) och ta emot data från applikationen. 
