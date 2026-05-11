@@ -22,8 +22,8 @@ const LoggedInUser = () => {
     <div className="loggedin-wrapper">
       <section className="loggedin-hero">
         <span className="loggedin-badge">Min sida</span>
-        <h1 className="headerLoggedIn">Välkommen {user?.name}</h1>
-        <p className="paragraphLoggedIn">Statuslogg för {user?.pet}</p>
+        <h1 className="headerLoggedIn">Välkommen {user.userName}</h1>
+        <p className="paragraphLoggedIn">Statuslogg för {user.petName}</p>
       </section>
 
       <Statuslog />
@@ -31,7 +31,7 @@ const LoggedInUser = () => {
       <section className="log-info">
         <h3 className="healthlog-header">Hälsologg</h3>
         <div className="log-info-row">
-          <p className="paragraphLoggedIn">Följ {user?.pet}s hälsa över tid</p>
+          <p className="paragraphLoggedIn">Hälsologg för {user.petName}</p>
           <div className="log-actions">
             <button className="log-action-btn" onClick={() => setShowAddToLog(true)}>Lägg till i logg</button>
             <button className="log-action-btn log-action-secondary" onClick={exportToPDF}>

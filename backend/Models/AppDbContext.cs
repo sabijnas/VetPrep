@@ -6,4 +6,6 @@ public class AppDbContext : DbContext
     {
         Database.EnsureCreated();
     }
+
+    public DbSet<User> Users{get; set;}
 }
