@@ -13,3 +13,10 @@ Applikationen ligger live på https://shark-app-p84vh.ondigitalocean.app om du i
 - Installera beroenden: npm install (OBS! se till att du är inne i frontend mappen, du kan navigera till den genom att skriva "ls" och sedan "cd frontend" i terminalen)
 - Starta server: npm run dev
 - Öppna applikationen i webbläsaren via den adress som visas i terminalen (oftast http://localhost:5173)
+#### BACKEND
+- Gå in i backend mappen genom att öppna terminalen och skriv "cd backend"
+- När du är inne i backend mappen, kör servern genom att skriva in "" OBS! detta är viktigt eftersom att API anropen hämtar från denna endpoint.  
+- 
+
+### Hur används API:et, vilka endpoint finns? 
+Krav på att två komponeter ska hämta data (GET), minst en endpoint ska ha impementerat (POST) och ta emot data från applikationen. 
