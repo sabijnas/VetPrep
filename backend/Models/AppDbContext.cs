@@ -8,4 +8,22 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<User> Users{get; set;}
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword("test");
+
+        modelBuilder.Entity<User>().HasData(
+            new User
+            {
+                UserId = 1,
+                UserName = "Sabina",
+                Password = hashedPassword,
+                Email = "sabina@mail.com",
+                PetName = "Xanthos"
+            }
+        );
+    }
 }
