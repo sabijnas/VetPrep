@@ -6,17 +6,34 @@ import Healthlog from "./Healthlog";
 import AddToLog from "./AddToLog";
 import exportToPDF from "./ExportToPDF";
 
+type LoggedInUserState = {
+  userId: number;
+  userName: string;
+  petName: string;
+  email: string;
+};
+
 const LoggedInUser = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  //Visa lägg till i logg-formulär
   const [showAddToLog, setShowAddToLog] = useState(false);
+  const [logRefreshKey, setLogRefreshKey] = useState(0);
   const user =
-    location.state || JSON.parse(sessionStorage.getItem("user") || "null");
+    (location.state as LoggedInUserState | null) ||
+    (JSON.parse(sessionStorage.getItem("user") || "null") as LoggedInUserState | null);
 
   useEffect(() => {
     if (!user) navigate("/LogIn");
   }, [user, navigate]);
+
+  if (!user) {
+    return null;
+  }
+
+  const handleLogSaved = () => {
+    setShowAddToLog(false);
+    setLogRefreshKey((prev) => prev + 1);
+  };
 
   return (
     <div className="loggedin-wrapper">
@@ -41,15 +58,15 @@ const LoggedInUser = () => {
         </div>
       </section>
 
-      <Healthlog />
+      <Healthlog userId={user.userId} refreshKey={logRefreshKey} />
 
       {showAddToLog && (
         <div className="modal-backdrop" onClick={() => setShowAddToLog(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <AddToLog/>
+            <AddToLog userId={user.userId} onSaved={handleLogSaved} />
             <div className="modal-actions">
               <button className="modal-close-btn modal-close-btn--secondary" onClick={()=> setShowAddToLog(false)}>Avbryt</button>
-              <button className="modal-close-btn" onClick={()=> setShowAddToLog(false)}>Spara</button>
+              <button className="modal-close-btn" type="submit" form="addlog-form">Spara</button>
             </div>
           </div>
         </div>
