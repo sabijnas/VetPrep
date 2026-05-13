@@ -41,5 +41,20 @@ namespace backend.Controllers
 
             return Ok(log);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteHealthlog(int id)
+        {
+            var log = await _context.HealthLogs.FindAsync(id);
+
+            if (log == null)
+            {
+                return NotFound();
+            }
+
+            _context.HealthLogs.Remove(log);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }

@@ -50,6 +50,19 @@ const Healthlog = ({ userId, refreshKey }: HealthlogProps) => {
     };
   }, [userId, refreshKey]);
 
+  const handleDelete = async (id: number) => {
+    const res = await fetch(`http://localhost:5229/api/healthlogs/${id}`, {
+    method: "DELETE",  
+    })
+
+    if (!res.ok) {
+      alert("Kunde inte ta bort loggen");
+      return;
+    }
+
+    setLogs((current) => current.filter((log) => log.id !== id));
+  }
+
   return (
     <div id="healthlog-content" className="healthlog-list">
       {logs.map((log) => (
@@ -63,7 +76,8 @@ const Healthlog = ({ userId, refreshKey }: HealthlogProps) => {
 
           <div className="healthlog-under-row">
             <p className="healthlog-note">{log.note}</p>
-            <i className="fa-regular fa-trash-can healthlog-action no-print"></i>
+            <i className="fa-regular fa-trash-can healthlog-action no-print"
+            onClick={() => handleDelete(log.id)}></i>
           </div>
 
           {log.imagePath && (
