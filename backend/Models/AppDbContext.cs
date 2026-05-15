@@ -26,5 +26,24 @@ public class AppDbContext : DbContext
                 PetName = "Xanthos"
             }
         );
+
+        modelBuilder.Entity<HealthLog>().HasData(
+            new HealthLog
+            {
+                Id = 1,
+                UserId = 1,
+                Date = DateTime.UtcNow.AddDays(-2),
+                Event = "Hälta",
+                Note = "Haltade på höger bakben i cirka 10 minuter vid lunchpromenaden. Blev bättre när vi kom in, ingen mer hälta under dagen."
+            },
+            new HealthLog
+            {
+                Id = 2,
+                UserId = 1,
+                Date = DateTime.UtcNow.AddDays(-20),
+                Event = "Ont i magen",
+                Note = "Hade ont i magen, ingen aptit under dagen. Släppte under kvällen och mådde bättre dagen efter."
+            }
+        );
     }
 }
