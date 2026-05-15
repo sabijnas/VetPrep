@@ -25,4 +25,4 @@ Jag har valt att ha både frontend och backend i samma repo men i seperata mappa
 ### Hur används API:et, vilka endpoint finns? 
 Krav på att två komponeter ska hämta data (GET), minst en endpoint ska ha impementerat (POST) och ta emot data från applikationen. Backend har två controllers med följande: 
 - UserController: använder GET anrop /api/users för att hämta alla användare. POST /api/users/login används för att logga in användare. POST /api/users/register används för att registrera ny användare. 
-- HealthLogController: använder GET anrop /api/healthlogs{userId} för att hämta alla hälsologgar för en användare, sorterat efter datum, senast först. POST /api/healthlogs lägger till ny hälsologg. OBS! I nuläget fungerar det inte att lägga till några bilder i häslologgen. 
+- HealthLogController: använder GET anrop /api/healthlogs{userId} för att hämta alla hälsologgar för en användare, sorterat efter datum, senast först. POST /api/healthlogs lägger till ny hälsologg. OBS! I nuläget fungerar det inte att lägga till några bilder i häslologgen. DELETE /api/healthlogs/{id} tar bort hälsologgar. 
