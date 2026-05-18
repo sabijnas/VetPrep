@@ -132,24 +132,28 @@
 }
 
 .status-icon--visit {
+  cursor: pointer;
   color: #4f675a;
   border-color: rgba(79, 103, 90, 0.28);
   background: rgba(122, 150, 135, 0.14);
 }
 
 .status-icon--weight {
+  cursor: pointer;
   color: #3f5d75;
   border-color: rgba(63, 93, 117, 0.28);
   background: rgba(109, 139, 163, 0.16);
 }
 
 .status-icon--activity {
+  cursor: pointer;
   color: #5a4f83;
   border-color: rgba(90, 79, 131, 0.3);
   background: rgba(138, 125, 176, 0.18);
 }
 
 .status-icon--health {
+  cursor: pointer;
   color: #8a3f52;
   border-color: rgba(138, 63, 82, 0.3);
   background: rgba(180, 112, 128, 0.18);

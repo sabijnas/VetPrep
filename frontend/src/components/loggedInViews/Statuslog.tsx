@@ -30,7 +30,7 @@ const Statuslog = () => {
             <i className="fa-solid fa-arrow-trend-up"></i>
           </div>
         </div>
-        <p className="p-info">Medel</p>
+        <p className="p-info">Låg</p>
       </div>
 
       <div className="statuslog-card statuslog-card--health">

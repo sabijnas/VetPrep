@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ErrorAlert from "../ErrorAlert";
 
 type AddToLogProps = {
     userId: number;
@@ -10,6 +11,7 @@ const AddToLog = ({ userId, onSaved }: AddToLogProps) => {
     const [event, setEvent] = useState("");
     const [note, setNote] = useState("");
     const [image, setImage] = useState<File | null>(null);
+    const [error, setError] = useState("");
 
     const handleSumbit = async(e: React.FormEvent) => {
         e.preventDefault();
@@ -27,7 +29,7 @@ const AddToLog = ({ userId, onSaved }: AddToLogProps) => {
         });
         
         if (!res.ok) {
-            alert("Kunde inte skapa logg");
+            setError("Kunde inte skapa logg");
             return;
         }
 
@@ -36,6 +38,7 @@ const AddToLog = ({ userId, onSaved }: AddToLogProps) => {
     return (
         <form className="addlog-form" id="addlog-form" onSubmit={handleSumbit}>
             <div className="addlog-head">
+                <ErrorAlert message={error}/>
                 <h2 className="addlog-title">Ny hälsologg</h2>
                 <p className="addlog-intro">Dokumentera ditt djurs hälsoinformation</p>
             </div>
