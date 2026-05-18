@@ -40,9 +40,17 @@ public class AppDbContext : DbContext
             {
                 Id = 2,
                 UserId = 1,
-                Date = DateTime.UtcNow.AddDays(-20),
-                Event = "Ont i magen",
+                Date = DateTime.UtcNow.AddDays(-12),
+                Event = "Magont",
                 Note = "Hade ont i magen, ingen aptit under dagen. Släppte under kvällen och mådde bättre dagen efter."
+            },
+            new HealthLog
+            {
+                Id = 3,
+                UserId = 1,
+                Date = DateTime.UtcNow.AddDays(-20),
+                Event = "Hälta",
+                Note = "Haltade på höger bakben under dagen, bra allmäntillstånd i övrigt. Blev bättre under kvällen."
             }
         );
     }
