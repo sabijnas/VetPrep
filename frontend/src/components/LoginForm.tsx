@@ -2,6 +2,7 @@ import "../css/Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Terms from "./Terms";
+import ErrorAlert from "./ErrorAlert";
 
 const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true); 
@@ -10,6 +11,7 @@ const LoginForm = () => {
   const [showTerms, setShowTerms] = useState(false);
   const [userName, setUserName] = useState("");
   const [petName, setPetName] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -29,8 +31,7 @@ const LoginForm = () => {
       });
 
       if (!res.ok) {
-        const errorText = await res.text();
-        alert(errorText);
+        setError("Fel mejl eller lösenord")
         return;
       }
 
@@ -39,13 +40,14 @@ const LoginForm = () => {
       sessionStorage.setItem("user", JSON.stringify(user));
       navigate("/LoggedInUser", {state: user});
     } catch (err) {
-      alert("Något gick fel mer servern");
+      setError("Något gick fel med servern")
       console.error(err)
     }
   };
   return (
     <section className="loginForm-card">
       <div className="loginContent">
+        <ErrorAlert message={error}/>
         <div
           className="button-group"
           role="tablist"
