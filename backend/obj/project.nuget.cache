@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kO9ms6udXnk=",
+  "dgSpecHash": "OSe9SrmhMq8=",
   "success": true,
   "projectFilePath": "/Users/sabinahalilovic/Desktop/VetPrep/backend/backend.csproj",
   "expectedPackageFiles": [
+    "/Users/sabinahalilovic/.nuget/packages/bcrypt.net-next/4.1.0/bcrypt.net-next.4.1.0.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/microsoft.entityframeworkcore/8.0.26/microsoft.entityframeworkcore.8.0.26.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.26/microsoft.entityframeworkcore.abstractions.8.0.26.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.26/microsoft.entityframeworkcore.analyzers.8.0.26.nupkg.sha512",
@@ -22,9 +23,9 @@
     "/Users/sabinahalilovic/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/Users/sabinahalilovic/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
     "/Users/sabinahalilovic/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "/Users/sabinahalilovic/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.22/microsoft.netcore.app.host.osx-arm64.8.0.22.nupkg.sha512",
-    "/Users/sabinahalilovic/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512"
+    "/Users/sabinahalilovic/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.22/microsoft.netcore.app.host.osx-arm64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }
