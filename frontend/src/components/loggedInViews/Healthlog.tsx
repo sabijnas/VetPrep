@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ErrorAlert from "../ErrorAlert";
 
 type HealthLog = {
   id: number;
@@ -24,6 +25,7 @@ const formatDate = (value: string) => {
 
 const Healthlog = ({ userId, refreshKey }: HealthlogProps) => {
   const [logs, setLogs] = useState<HealthLog[]>([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     let isActive = true;
@@ -56,15 +58,17 @@ const Healthlog = ({ userId, refreshKey }: HealthlogProps) => {
     })
 
     if (!res.ok) {
-      alert("Kunde inte ta bort loggen");
+      setError("Kunde inte ta bort loggen");
       return;
     }
 
+    setError("");
     setLogs((current) => current.filter((log) => log.id !== id));
   }
 
   return (
     <div id="healthlog-content" className="healthlog-list">
+      <ErrorAlert message={error}/>
       {logs.map((log) => (
         <div key={log.id} className="healthlog-card">
           <div className="healthlog-row">
