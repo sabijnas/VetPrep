@@ -2,35 +2,52 @@ import "../css/Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Terms from "./Terms";
+import ErrorAlert from "./ErrorAlert";
 
 const LoginForm = () => {
-  const [isLogin, setIsLogin] = useState(true); // true = login, false = register
-  const [email, setEmail] = useState(""); //hårdkoda email + lösen för inlogging
+  const [isLogin, setIsLogin] = useState(true); 
+  const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
   const [showTerms, setShowTerms] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [petName, setPetName] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
-  const handleSumbit = (e: { preventDefault: () => void }) => {
+  const handleSumbit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const hardcodedUser = {
-      email: "test@mail.com",
-      password: "1234",
-      name: "Test",
-      pet: "Kevin",
-    };
+    const endpoint = isLogin ? "login" : "register";
 
-    if (email === hardcodedUser.email && password === hardcodedUser.password) {
-      sessionStorage.setItem("user", JSON.stringify(hardcodedUser));
-      navigate("/LoggedInUser", { state: hardcodedUser });
-    } else {
-      alert("fel mejl eller lösenord");
+    const body = isLogin ? {email, password} :
+    { userName, petName, email, password}
+
+    try {
+      const res = await fetch(`http://localhost:5229/api/users/${endpoint}`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        setError("Fel mejl eller lösenord")
+        return;
+      }
+
+      const user = await res.json();
+
+      sessionStorage.setItem("user", JSON.stringify(user));
+      navigate("/LoggedInUser", {state: user});
+    } catch (err) {
+      setError("Något gick fel med servern")
+      console.error(err)
     }
   };
   return (
     <section className="loginForm-card">
       <div className="loginContent">
+        <ErrorAlert message={error}/>
         <div
           className="button-group"
           role="tablist"
@@ -74,11 +91,11 @@ const LoginForm = () => {
             <button type="submit">Logga in</button>
           </form>
         ) : (
-          <form className="form">
-            <input type="text" placeholder="Ditt namn" />
-            <input type="text" placeholder="Namn på husdjur" />
-            <input type="email" placeholder="Mejl" />
-            <input type="password" placeholder="Lösenord" />
+          <form className="form" onSubmit={handleSumbit}>
+            <input type="text" placeholder="Ditt namn" value={userName} onChange={(e) => setUserName(e.target.value)} />
+            <input type="text" placeholder="Namn på husdjur" value={petName} onChange={(e) => setPetName(e.target.value)} />
+            <input type="email" placeholder="Mejl" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input type="password" placeholder="Lösenord" value={password} onChange={(e) => setPassword(e.target.value)} />
             <button type="submit">Registrera</button>
           </form>
         )}
