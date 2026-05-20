@@ -32,7 +32,7 @@ public class AppDbContext : DbContext
             {
                 Id = 1,
                 UserId = 1,
-                Date = DateTime.UtcNow.AddDays(-2),
+                Date = DateTime.UtcNow.AddDays(-17),
                 Event = "Hälta",
                 Note = "Haltade på höger bakben i cirka 10 minuter vid lunchpromenaden. Blev bättre när vi kom in, ingen mer hälta under dagen."
             },
@@ -48,7 +48,7 @@ public class AppDbContext : DbContext
             {
                 Id = 3,
                 UserId = 1,
-                Date = DateTime.UtcNow.AddDays(-20),
+                Date = DateTime.UtcNow.AddDays(-41),
                 Event = "Hälta",
                 Note = "Haltade på höger bakben under dagen, bra allmäntillstånd i övrigt. Blev bättre under kvällen."
             }
