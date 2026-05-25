@@ -46,7 +46,7 @@
     }
 }
 
-.readMoreHeader, .healthadivce-header {
+.readMoreHeader, .healthadivce-header, .errorHeader {
     font-family: "DM Sans", sans-serif;
     margin-bottom: 10px;
     color: #39413c;
@@ -282,7 +282,7 @@
     margin-top: 26px;
 }
 
-.home-link {
+.home-link, .loadBtn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -308,10 +308,15 @@
     box-shadow: 0 16px 28px rgba(94, 123, 104, 0.28);
 }
 
-.home-linkSecondary {
+.home-linkSecondary, .loadBtn {
     border: 1px solid rgba(57, 65, 60, 0.18);
     color: #39413c;
     background: rgba(255, 255, 255, 0.7);
+}
+
+.loadBtn {
+    background: #5E7B68;
+    color: white;
 }
 
 .home-visual {
