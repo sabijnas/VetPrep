@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import "../css/Modal.css";
 
 type ModalProps = {
   isOpen: boolean;
@@ -26,7 +27,7 @@ const Modal = ({ isOpen, onClose, title, children, footer }: ModalProps) => {
   }, [isOpen, onClose]);
 
   return (
-    <div onClick={onClose}>
+    <div className="modal-overlay" onClick={onClose}>
       <div
         className="modal-content"
         role="dialog"

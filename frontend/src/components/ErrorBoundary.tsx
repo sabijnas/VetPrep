@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/NavViews.css"
+import "../css/NavViews.css"
 import ErrorAlert from "./ErrorAlert";
 
 type Props = { children?: React.ReactNode; };
