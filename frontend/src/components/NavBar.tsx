@@ -1,17 +1,15 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "../css/NavBar.css";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
 
 const NavBar = () => {
-  /* isOpen = om menyn är öppen true/false 
-     setIsOpen = funktion för att ändra värdet */
   const [isOpen, setIsOpen] = useState(false);
-
-  const storedUser = JSON.parse(sessionStorage.getItem("user") || "null");
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    sessionStorage.removeItem("user");
+    logout();
     navigate("/");
   };
   return (
@@ -21,7 +19,6 @@ const NavBar = () => {
           VetPrep
         </NavLink>
 
-        {/* Vid klick växlas true/false */}
         <button
           type="button"
           className={isOpen ? "hamburger-menu is-open" : "hamburger-menu"}
@@ -34,8 +31,6 @@ const NavBar = () => {
           <span></span>
         </button>
 
-        {/* isOpen = true, lägg till active (menyn visas på mindre skärmar)
-            om false = nav-links visas */}
         <div className={isOpen ? "nav-links active" : "nav-links"}>
           <NavLink
             to="/"
@@ -59,7 +54,7 @@ const NavBar = () => {
           >
             Läs Mer
           </NavLink>
-          {storedUser ? (
+          {user ? (
             <>
               <NavLink
                 to="/LoggedInUser"
