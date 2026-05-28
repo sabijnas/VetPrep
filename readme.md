@@ -28,6 +28,7 @@ Jag har valt att ha både frontend och backend i samma repo men i seperata mappa
 ### Hur används API:et, vilka endpoint finns? 
 Backend har två controllers med följande:  
 - UserController: använder GET anrop /api/users för att hämta alla användare. POST /api/users/login används för att logga in användare. POST /api/users/register används för att registrera ny användare. 
-- HealthLogController: använder GET anrop /api/healthlogs/{userId} för att hämta alla hälsologgar för en användare, sorterat efter datum, senast först. POST /api/healthlogs lägger till ny hälsologg. OBS! I nuläget fungerar det inte att lägga till några bilder i häslologgen. DELETE /api/healthlogs/{id} tar bort hälsologgar. 
+- HealthLogController: använder GET anrop /api/healthlogs/{userId} för att hämta alla hälsologgar för en användare, sorterat efter datum, senast först. POST /api/healthlogs lägger till ny hälsologg. DELETE /api/healthlogs/{id} tar bort hälsologgar. 
 
 ### Vidareutveckling
+Som vidareutveckling för min MVP skulle jag vilja lägga till PATCH anrop för att kunna uppdatera statusloggen för husdjuret, samt lägga till samma funktion för att kunna redigera häslologgar, samt kunna lägga till bilder i hälsologgen. Jag skulle även vilja bygga ut applikationen så att en användare kan lägga till fler djur vid behov. Utöver detta skulle jag även vilja lägga till ett system för påminnelser, exempel "Du loggade magont för 3 dagar sedan - hur mår djuret nu?".
