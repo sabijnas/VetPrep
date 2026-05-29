@@ -1,27 +1,18 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Statuslog from "./Statuslog";
 import "../../css/LoggedInUser.css";
 import Healthlog from "./Healthlog";
 import AddToLog from "./AddToLog";
 import exportToPDF from "./ExportToPDF";
-
-type LoggedInUserState = {
-  userId: number;
-  userName: string;
-  petName: string;
-  email: string;
-};
+import { useAuth } from "../../context/AuthContext";
 
 const LoggedInUser = () => {
-  const location = useLocation();
   const navigate = useNavigate();
   const [showAddToLog, setShowAddToLog] = useState(false);
   const [logRefreshKey, setLogRefreshKey] = useState(0);
-  const user =
-    (location.state as LoggedInUserState | null) ||
-    (JSON.parse(sessionStorage.getItem("user") || "null") as LoggedInUserState | null);
-
+  const { user } = useAuth();
+ 
   useEffect(() => {
     if (!user) navigate("/LogIn");
   }, [user, navigate]);

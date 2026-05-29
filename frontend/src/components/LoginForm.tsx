@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Terms from "./Terms";
 import ErrorAlert from "./ErrorAlert";
+import { useAuth } from "../context/AuthContext";
 
 const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true); 
@@ -13,6 +14,7 @@ const LoginForm = () => {
   const [petName, setPetName] = useState("");
   const [error, setError] = useState("");
 
+  const {login} = useAuth();
   const navigate = useNavigate();
 
   const handleSumbit = async (e: React.FormEvent) => {
@@ -37,8 +39,8 @@ const LoginForm = () => {
 
       const user = await res.json();
 
-      sessionStorage.setItem("user", JSON.stringify(user));
-      navigate("/LoggedInUser", {state: user});
+      login(user);
+      navigate("/LoggedInUser");
     } catch (err) {
       setError("Något gick fel med servern")
       console.error(err)
